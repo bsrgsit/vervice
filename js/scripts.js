@@ -70,7 +70,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.getElementById('navLinks');
 
     if (mobileMenuBtn && navLinks) {
-        mobileMenuBtn.addEventListener('click', () => {
+        mobileMenuBtn.addEventListener('click', (e) => {
+            e.stopPropagation(); // Prevent the document click listener right below from immediately hiding it
             const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
             mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
             mobileMenuBtn.classList.toggle('active');
