@@ -294,6 +294,10 @@ body.dark-mode .btn-glass:hover {
     color: var(--clean-green);
 }
 
+.mobile-only-brand {
+    display: none;
+}
+
 .nav-links {
     display: flex;
     align-items: center;
@@ -319,6 +323,8 @@ body.dark-mode .btn-glass:hover {
     border: none;
     cursor: pointer;
     z-index: 1002;
+    position: relative;
+    /* Fixed: allows z-index to overlay fixed menu */
 }
 
 .hamburger-line {
@@ -348,21 +354,24 @@ body.dark-mode .btn-glass:hover {
     .nav-links {
         position: fixed;
         top: 0;
-        left: 0;
-        width: 100%;
+        right: 0;
+        left: auto;
+        width: 250px;
         height: 100vh;
         background: var(--clean-surface);
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 40px;
-        transform: translateY(-100%);
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 100px 30px 40px;
+        gap: 30px;
+        transform: translateX(100%);
         transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         z-index: 1000;
+        box-shadow: -5px 0 25px rgba(0, 0, 0, 0.1);
     }
 
     .nav-links.active {
-        transform: translateY(0);
+        transform: translateX(0);
     }
 
     .nav-link {
@@ -373,6 +382,10 @@ body.dark-mode .btn-glass:hover {
     .nav-merge-animation {
         display: none;
         /* Hide the long animation text on small mobile screens to prevent overflow */
+    }
+
+    .mobile-only-brand {
+        display: block;
     }
 }
 
