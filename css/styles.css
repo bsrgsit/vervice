@@ -331,6 +331,7 @@ body.dark-mode .btn-glass:hover {
 }
 
 @media (max-width: 768px) {
+<<<<<<< HEAD
     body {
         padding-bottom: 75px;
         /* Space for bottom nav */
@@ -363,6 +364,49 @@ body.dark-mode .btn-glass:hover {
         transform: scale(0.6);
         transform-origin: left center;
         margin-left: 8px;
+=======
+    .nav-content {
+        position: relative;
+        display: block;
+        /* Ignore flex on mobile */
+    }
+
+    .logo-container {
+        display: block;
+    }
+
+    .nav-logo {
+        position: absolute;
+        left: 0;
+        top: 20px;
+    }
+
+    .mobile-menu-btn {
+        display: flex;
+        position: absolute;
+        right: 0;
+        top: 30px;
+        z-index: 1005;
+    }
+
+    .hamburger-line {
+        background-color: var(--text-primary);
+    }
+
+    .mobile-menu-btn.active .hamburger-line {
+        background-color: var(--clean-surface);
+        /* Make X white when menu is open */
+    }
+
+    .nav-merge-animation {
+        position: absolute;
+        left: 55px;
+        top: 14px;
+        transform: scale(0.65);
+        transform-origin: left center;
+        margin: 0;
+        pointer-events: none;
+>>>>>>> e3e350c6da16952a7433807a66fa75757edca6be
     }
 
     .nav-links {
@@ -406,6 +450,7 @@ body.dark-mode .btn-glass:hover {
         height: 100%;
         padding: 8px 0;
     }
+<<<<<<< HEAD
 
     .nav-link-icon {
         display: block;
@@ -436,6 +481,8 @@ body.dark-mode .btn-glass:hover {
     .nav-cta-mobile .nav-link-icon {
         color: var(--clean-blue);
     }
+=======
+>>>>>>> e3e350c6da16952a7433807a66fa75757edca6be
 }
 
 /* --- Hero Section --- */
