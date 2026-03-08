@@ -345,6 +345,10 @@ body.dark-mode .btn-glass:hover {
 @media (max-width: 768px) {
     .mobile-menu-btn {
         display: flex;
+        position: absolute;
+        right: 24px;
+        top: 30px;
+        /* (80px nav height - 20px button height) / 2 */
     }
 
     .nav-links {
@@ -379,6 +383,10 @@ body.dark-mode .btn-glass:hover {
         transform: scale(0.65);
         transform-origin: left center;
         margin-left: 0;
+        margin-right: -90px;
+        /* Reclaim empty space given up by scale(0.65) */
+        pointer-events: none;
+        /* Prevent overlapping invisible bounds from blocking clicks */
     }
 }
 
