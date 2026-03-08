@@ -294,10 +294,6 @@ body.dark-mode .btn-glass:hover {
     color: var(--clean-green);
 }
 
-.mobile-only-brand {
-    display: none;
-}
-
 .nav-links {
     display: flex;
     align-items: center;
@@ -380,12 +376,9 @@ body.dark-mode .btn-glass:hover {
     }
 
     .nav-merge-animation {
-        display: none;
-        /* Hide the long animation text on small mobile screens to prevent overflow */
-    }
-
-    .mobile-only-brand {
-        display: block;
+        transform: scale(0.65);
+        transform-origin: left center;
+        margin-left: 0;
     }
 }
 
