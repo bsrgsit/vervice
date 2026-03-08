@@ -354,7 +354,7 @@ body.dark-mode .btn-glass:hover {
     .nav-links {
         position: fixed;
         top: 0;
-        right: 0;
+        right: -300px;
         left: auto;
         width: 250px;
         height: 100vh;
@@ -364,14 +364,15 @@ body.dark-mode .btn-glass:hover {
         align-items: flex-start;
         padding: 100px 30px 40px;
         gap: 30px;
-        transform: translateX(100%);
-        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.4s;
         z-index: 1000;
         box-shadow: -5px 0 25px rgba(0, 0, 0, 0.1);
+        visibility: hidden;
     }
 
     .nav-links.active {
-        transform: translateX(0);
+        right: 0;
+        visibility: visible;
     }
 
     .nav-link {
