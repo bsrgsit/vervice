@@ -313,6 +313,11 @@ body.dark-mode .btn-glass:hover {
     .nav-links {
         display: none;
     }
+
+    .nav-merge-animation {
+        display: none;
+        /* Hide the long animation text on small mobile screens to prevent overflow */
+    }
 }
 
 /* --- Hero Section --- */
