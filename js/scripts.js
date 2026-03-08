@@ -65,38 +65,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Mobile Menu Toggle
-    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-    const navLinks = document.getElementById('navLinks');
+    // Mobile Menu Toggle logic removed in favor of bottom navigation bar
 
-    if (mobileMenuBtn && navLinks) {
-        mobileMenuBtn.addEventListener('click', (e) => {
-            e.stopPropagation(); // Prevent the document click listener right below from immediately hiding it
-            const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
-            mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
-            mobileMenuBtn.classList.toggle('active');
-            navLinks.classList.toggle('active');
-        });
-
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!mobileMenuBtn.contains(e.target) && !navLinks.contains(e.target)) {
-                navLinks.classList.remove('active');
-                mobileMenuBtn.classList.remove('active');
-                mobileMenuBtn.setAttribute('aria-expanded', 'false');
-            }
-        });
-
-        // Close mobile menu on escape key
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && navLinks.classList.contains('active')) {
-                navLinks.classList.remove('active');
-                mobileMenuBtn.classList.remove('active');
-                mobileMenuBtn.setAttribute('aria-expanded', 'false');
-                mobileMenuBtn.focus();
-            }
-        });
-    }
 
     // Scroll Progress Indicator
     const scrollProgress = document.getElementById('scrollProgress');
